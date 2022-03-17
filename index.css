@@ -104,7 +104,7 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
   background-color: hsl(240, 3%, 7%);
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
   align-items: center;
@@ -115,7 +115,7 @@ button {
   grid-template-columns: repeat(20,minmax(auto, 1.5em));
   grid-auto-rows: 3em;
   grid-gap: 0.25em;
-  margin: 3em 1em;
+  margin: 0 1em 3em 1em;
 }
 
 .key { 
@@ -178,7 +178,7 @@ button {
   justify-content: center;
   align-content: center;
   flex-grow: 1;
-  margin-bottom: 1em;
+  margin: 2em 0;
  }
 
  .tile { 
