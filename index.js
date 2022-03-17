@@ -15294,24 +15294,33 @@ const targetWords = [
 const WORD_LENGTH = 5
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
-
+const allowedKeys = /^[a-zA-Z]$/
 const targetWord = targetWords[Math.floor(Math.random() * targetWords.length)]
 
 const guessGrid = document.querySelector('.guess-grid')
 const keyboard = document.querySelector('.keyboard')
 const result = document.querySelector('.result')
+const help = document.querySelector('.help')
+const close = document.querySelector('.close')
+const instructions = document.querySelector('.instructions')
+
+function toggleInstructions(){
+  instructions.classList.toggle('open')
+}
 
 function startInteraction() {
   document.addEventListener('keydown', handleKeyPress)
   document.addEventListener('click', handleMouseClick)
+  help.addEventListener('click', toggleInstructions)
+  close.addEventListener('click', toggleInstructions)
 }
 
 function stopInteraction() {
   document.removeEventListener('keydown', handleKeyPress)
   document.removeEventListener('click', handleMouseClick)
+  help.removeEventListener('click', toggleInstructions)
+  close.removeEventListener('click', toggleInstructions)
 }
-
-const allowedKeys = /^[a-zA-Z]$/
 
 function handleMouseClick(e) {
   if (e.target.matches("[data-key]")) {

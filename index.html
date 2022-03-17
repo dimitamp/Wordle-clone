@@ -13,14 +13,57 @@
 <body>
   <div class="container">
     <div class="result"></div>
-    <div class="game-title">
-      <span>W</span>
-      <span>O</span>
-      <span>R</span>
-      <span>D</span>
-      <span>L</span>
-      <span>E</span>
-    </div>
+    <div class="instructions">
+      <button class="close">&#215;</button>
+      <h4>
+        HOW TO PLAY
+      </h4>
+      <div class="intro">
+        <p>Guess the WORDLE in six tries. </p>
+        <p>Each guess must be a valid five-letter word. Hit the enter button to submit. </p>
+        <p>After each guess, the color of the tiles will change to show how close your guess was to the word.</p>
+      </div>
+      <div class="examples">
+        <p>Examples</p>
+        <div class="example">
+          <div class="tile" data-state="correct">C</div>
+          <div class="tile">I</div>
+          <div class="tile">G</div>
+          <div class="tile">A</div>
+          <div class="tile">R</div>
+        </div>
+        <p>The letter W is in the word and in the correct spot.</p>
+        <div class="example">
+          <div class="tile">F</div>
+          <div class="tile" data-state="wrong-location">L</div>
+          <div class="tile">O</div>
+          <div class="tile">O</div>
+          <div class="tile">R</div>
+        </div>
+        <p>The letter I is in the word but in the wrong spot.</p>
+        <div class="example">
+          <div class="tile">A</div>
+          <div class="tile">N</div>
+          <div class="tile">I</div>
+          <div class="tile" data-state="wrong">M</div>
+          <div class="tile">E</div>
+        </div>
+        <p>The letter U is not in the word in any spot.</p>
+      </div>
+      </div>
+      <header>
+        <div class="title">
+        <span>W</span>
+        <span>O</span>
+        <span>R</span>
+        <span>D</span>
+        <span>L</span>
+        <span>E</span>
+      </div>
+      <button class="help">
+         ?
+      </button>
+    </header>
     <div class="guess-grid">
       <div class="tile"></div>
       <div class="tile"></div>
