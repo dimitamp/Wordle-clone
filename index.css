@@ -18,16 +18,16 @@ body {
   flex-direction: column;
   height: 100%;
   background-color: hsl(240, 3%, 7%);
-  padding: 1em;
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
   align-items: center;
 }
 
 .keyboard { 
   display: grid;
-  grid-template-columns: repeat(20,minmax(auto, 1.25em));
+  grid-template-columns: repeat(20,minmax(auto, 1.5em));
   grid-auto-rows: 3em;
   grid-gap: 0.25em;
+  margin: 3em 1em;
 }
 
 .key { 
@@ -84,9 +84,13 @@ body {
 }
 
 .game-title { 
+  width: 100%;
+  text-align: center;
   color: #fff;
   font-size: 2em;
-  margin: 1em 0;
+  padding: 0.25em;
+  border-bottom: 0.05em solid hsl(200, 2%, 23%);
+  box-shadow: 1px 0px 5px 1px hsl(250, 2%, 23%);
 }
 
 .game-title span:nth-child(2) {
@@ -213,4 +217,11 @@ body {
  100% { 
    transform: translateY(0)
  }
+}
+
+@media only screen and (max-width: 480px) { 
+  .guess-grid { 
+    grid-auto-rows: 6em;
+    grid-template-columns: repeat(5, 6em);
+  }
 }
