@@ -278,4 +278,9 @@ button {
     grid-auto-rows: 6em;
     grid-template-columns: repeat(5, 6em);
   }
+
+  .instructions { 
+    width: 80vw;
+    font-size: 1.2em;
+  }
 }
